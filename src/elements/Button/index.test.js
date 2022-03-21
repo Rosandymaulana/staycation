@@ -18,7 +18,7 @@ test("Should render loading/spinner", () => {
 });
 
 test("Should render <a> tag", () => {
-    const { container, getByText } = render(<Button type='link' isExternal></Button>)
+    const { container } = render(<Button type='link' isExternal></Button>)
 
     expect(container.querySelector("a")).toBeInTheDocument();
 });
@@ -26,7 +26,7 @@ test("Should render <a> tag", () => {
 test("Should render <Link> component", () => {
     const { container } = render(
         <Router>
-            <Button href='' isExternal></Button>
+            <Button href='' type='link'></Button>
         </Router>
     );
 
