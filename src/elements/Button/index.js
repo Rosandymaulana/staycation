@@ -10,9 +10,9 @@ export default function Button(props) {
     if (props.isBlock) className.push("btn-block")
     if (props.hasShadow) className.push("btn-shadow")
 
-    const onclick = () => {
-        if (props.onclick) props.onclick()
-    }
+    const onClick = () => {
+        if (props.onClick) props.onClick();
+    };
 
     if (props.isDisabled || props.isLoading) {
         if (props.isDisabled) className.push("disabled");
@@ -45,7 +45,11 @@ export default function Button(props) {
             )
         } else {
             return (
-                <Link to={props.href} className={className.join(" ")} style={props.style} onClick={onclick}>
+                <Link
+                    to={props.href}
+                    className={className.join(" ")}
+                    style={props.style}
+                    onClick={onClick}>
                     {props.children}
                 </Link>
             )
@@ -64,7 +68,7 @@ Button.propTypes = {
     href: propTypes.string,
     target: propTypes.string,
     className: propTypes.string,
-    isPrimary: propTypes.string,
+    isPrimary: propTypes.bool,
     isDisabled: propTypes.bool,
     isLoading: propTypes.bool,
     isSmall: propTypes.bool,
