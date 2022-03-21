@@ -31,7 +31,7 @@ export default function Hero(props) {
                         we provide what you need to enjoy your holiday with family. Time to
                         make another memorable moments.
                     </p>
-                    <Button className="btn px-5" hasShadow isPrimary={showMostPicked}>
+                    <Button onClick={showMostPicked} className="btn px-5" hasShadow isPrimary={showMostPicked}>
                         Show Me Now
                     </Button>
 

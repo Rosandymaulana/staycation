@@ -59,12 +59,12 @@ export default function Button(props) {
 
 
     //Hampir Salah Button
-    return <button className={className.join(" ")} style={props.style} onClick={onclick}> {props.children}</button>
+    return <button className={className.join(" ")} style={props.style} onClick={onClick}> {props.children}</button>
 }
 
 Button.propTypes = {
     type: propTypes.oneOf(["button", "link"]),
-    onclick: propTypes.func,
+    onClick: propTypes.func,
     href: propTypes.string,
     target: propTypes.string,
     className: propTypes.string,
