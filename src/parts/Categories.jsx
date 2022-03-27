@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from 'elements/Button'
+import { LightSpeed } from 'react-awesome-reveal'
 
 export default function Categories({ data }) {
     return data.map((category, index1) => {
@@ -23,7 +24,7 @@ export default function Categories({ data }) {
                                     <img src={item.imageUrl} alt={item.name} className="img-cover" />
                                 </figure>
                                 <div className="meta-wrapper">
-                                    <Button type='link' href={`/properties/${item._id}`} className="block text-dark text-decoration-none" >
+                                    <Button type='link' href={`/properties/${item._id}`} className="stretched-link block text-dark text-decoration-none" >
                                         <h5 className="h4">{item.name}</h5>
                                     </Button>
                                     <span className="text-gray-500">
