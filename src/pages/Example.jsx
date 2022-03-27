@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import InputNumber from 'elements/Form/InputNumber'
 
 export default class Example extends Component {
@@ -22,7 +21,7 @@ export default class Example extends Component {
                     <div className="col-auto">
                         <InputNumber
                             max={30}
-                            onchange={this.handleChange}
+                            onChange={this.handleChange}
                             name="value"
                             value={this.state.value}
                         />
