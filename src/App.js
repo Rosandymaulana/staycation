@@ -1,7 +1,6 @@
-import '../src/assets/scss/style.scss';
-import { createBrowserHistory } from "history";
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import { Router, Route, Switch } from 'react-router-dom'
 import LandingPage from 'pages/LandingPage';
 import Example from 'pages/Example'
 
