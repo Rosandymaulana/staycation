@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import InputDate from 'elements/Form/InputDate'
 import Breadcrumb from 'elements/Breadcrumb'
+import PageDetailTitle from 'parts/PageDetailTitle'
 
 export default class Example extends Component {
     // state = {
@@ -29,6 +30,7 @@ export default class Example extends Component {
                 >
                     <div className="col-auto">
                         <Breadcrumb data={breadcrumb} />
+
                     </div>
                 </div>
             </div>
