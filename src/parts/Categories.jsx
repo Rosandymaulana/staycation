@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from 'elements/Button'
-import { LightSpeed } from 'react-awesome-reveal'
 
 export default function Categories({ data }) {
     return data.map((category, index1) => {

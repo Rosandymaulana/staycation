@@ -43,7 +43,7 @@ export default function Date(props) {
         }
     }
 
-    const check = focus => {
+    const check = (focus) => {
         focus.indexOf(1) < 0 && setIsShowed(false)
     }
 
@@ -88,5 +88,5 @@ Date.propTypes = {
     value: propTypes.object,
     onChange: propTypes.func,
     placeholder: propTypes.string,
-    outerClassName: propTypes.string
-}
+    outerClassName: propTypes.string,
+};
