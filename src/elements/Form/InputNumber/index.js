@@ -42,8 +42,10 @@ export default function Number(props) {
             onChange({
                 target: {
                     name: name,
-                    value: +value + 2,
+                    value: +value + 1,
+
                 },
+
             });
     };
 

@@ -27,24 +27,24 @@ class BookingForm extends Component {
             ...this.state,
             data: {
                 ...this.state.data,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value,
             }
         })
     }
 
-    componentDidUpdate(prepProps, prevState) {
-        const { data } = this.state
+    componentDidUpdate(prevProps, prevState) {
+        const { data } = this.state;
 
         if (prevState.data.date !== data.date) {
             const startDate = new Date(data.date.startDate);
-            const endDate = new Date(data.date.endDate)
+            const endDate = new Date(data.date.endDate);
             const countDuration = new Date(endDate - startDate).getDate();
             this.setState({
                 data: {
                     ...this.state.data,
                     duration: countDuration,
-                }
-            })
+                },
+            });
         }
 
         if (prevState.data.duration !== data.duration) {
@@ -56,14 +56,27 @@ class BookingForm extends Component {
                 ...this.state,
                 data: {
                     ...this.state.data,
-                    data: {
+                    date: {
                         ...this.state.data.date,
-                        endDate: endDate
-                    }
-                }
-            })
+                        endDate: endDate,
+                    },
+                },
+            });
         }
     }
+
+    startBooking = () => {
+        const { data } = this.state;
+        this.props.startBooking({
+            _id: this.props.itemDetails._id,
+            duration: data.duration,
+            date: {
+                startDate: data.date.startDate,
+                endDate: data.date.endDate,
+            },
+        });
+        this.props.history.push("/checkout");
+    };
 
     render() {
         const { data } = this.state
@@ -113,7 +126,7 @@ class BookingForm extends Component {
                     isBlock
                     onClick={this.startBooking}
                 >
-                    Continut to Book
+                    Continue to Book
                 </Button>
             </div>
         )
